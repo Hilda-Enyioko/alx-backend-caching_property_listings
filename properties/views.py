@@ -13,4 +13,6 @@ def property_list(request):
         'location',
         'created_at'
     )
-    return JsonResponse(list(properties), safe=False)
+    return JsonResponse({
+        "data": list(properties)
+    })
